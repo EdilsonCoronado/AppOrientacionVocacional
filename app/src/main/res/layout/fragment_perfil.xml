@@ -1,17 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragmentos.FragmentTests">
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragmentos.FragmentPerfil">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="PERFIL"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="25sp"/>
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+
+
+        <!--Nombres-->
+        <TextView
+            android:id="@+id/txt_nombres"
+            android:text="@string/txt_nombres"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_nombres"
+            android:text="@string/tv_nombres"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--Email-->
+        <TextView
+            android:id="@+id/txt_email"
+            android:text="@string/txt_email"
+            android:layout_below="@id/txt_nombres"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:text="@string/tv_email"
+            android:layout_below="@+id/txt_nombres"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Cerrarsesion"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_email"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_Cerrarsesion"
+            android:textAllCaps="true"
+            app:cornerRadius="8dp" />
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
