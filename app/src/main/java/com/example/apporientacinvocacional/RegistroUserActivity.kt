@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
+import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -32,6 +33,10 @@ class RegistroUserActivity : AppCompatActivity() {
         progressDialog.setTitle("Espere por favor")
         progressDialog.setCanceledOnTouchOutside(false)
 
+        val items = arrayOf("Maculino", "Femenino")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items)
+        binding.etGenero.adapter = adapter
+
         binding.btnRegistrar.setOnClickListener {
             validarInfomacion()
         }
@@ -53,6 +58,9 @@ class RegistroUserActivity : AppCompatActivity() {
         email = binding.etEmail .text.toString().trim()
         password = binding.etPassword.text.toString().trim()
         r_password = binding.etRPassword.text.toString().trim()
+
+
+        genero = binding.etGenero.selectedItem.toString()
 
         if (nombres.isEmpty()) {
             binding.etNombres.error = "Ingrese nombre"
@@ -103,6 +111,7 @@ class RegistroUserActivity : AppCompatActivity() {
 
     private fun actualizarInformacion() {
         progressDialog.setMessage("Guardando información")
+
 
         val uidU = firebaseAuth.uid
         val nombresU = nombres

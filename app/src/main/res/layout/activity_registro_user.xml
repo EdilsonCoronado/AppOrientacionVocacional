@@ -168,11 +168,16 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <!--Género-->
-            <Spinner
-                android:id="@+id/et_Genero"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/et_Genero"/>
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/et_Genero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/et_Genero"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <!--Colegio-->
             <com.google.android.material.textfield.TextInputLayout
