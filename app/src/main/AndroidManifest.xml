@@ -31,9 +31,6 @@
             android:name=".OpcionesLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".Fragmentos.OpcionesLoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
