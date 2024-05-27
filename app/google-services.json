@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "383300123848",
+    "project_id": "apporientacionvocacional",
+    "storage_bucket": "apporientacionvocacional.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383300123848:android:f5803747148405534ab9fd",
+        "android_client_info": {
+          "package_name": "com.example.apporientacinvocacional"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyW-D3Wi8ta5XSz-eLV1MwQmahe_Llxgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

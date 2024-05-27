@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_perfil"
+        android:title="@string/item_perfil"
+        android:icon="@drawable/ic_perfil"/>
+
+    <item
+        android:id="@+id/item_tests"
+        android:title="@string/item_tests"
+        android:icon="@drawable/ic_tests"/>
+
+    <item
+        android:id="@+id/item_feedback"
+        android:title="@string/item_feedback"
+        android:icon="@drawable/ic_feedback"/>
+
+</menu>
