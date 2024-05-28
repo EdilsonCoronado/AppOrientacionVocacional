@@ -1,20 +1,25 @@
 package com.example.apporientacinvocacional
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.apporientacinvocacional.databinding.ActivityTest6Binding
 
 class Test6Activity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityTest6Binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        binding = ActivityTest6Binding.inflate(layoutInflater)
         setContentView(R.layout.activity_test6)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        binding.t6BotonEnviar.setOnClickListener {
+            startActivity(Intent(applicationContext, MainActivity::class.java))
+            finishAffinity()
         }
     }
 }

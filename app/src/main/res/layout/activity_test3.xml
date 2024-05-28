@@ -1,10 +1,416 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Test3Activity">
+    tools:context=".Test1Activity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. ¿Te gusta trabajar con números y datos?"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/t3RadioGroupQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton1A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí, mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton1B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Sí, algo" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton1C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton1D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada" />
+            </RadioGroup>
+
+            <!-- Pregunta 2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. ¿Prefieres un trabajo con mucha interacción social?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t3RadioGroupQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton2A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí, mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton2B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Sí, algo" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton2C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton2D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada" />
+            </RadioGroup>
+
+            <!-- Pregunta 3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. ¿Disfrutas de actividades creativas como pintar o escribir?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t3RadioGroupQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton3A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí, mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton3B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Sí, algo" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton3C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton3D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada" />
+            </RadioGroup>
+
+            <!-- Pregunta 4 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. ¿Te interesa la investigación científica?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t3RadioGroupQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton4A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí, mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton4B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Sí, algo" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton4C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton4D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada" />
+            </RadioGroup>
+
+            <!-- Pregunta 5 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. ¿Te gustaría un trabajo donde tengas que tomar decisiones rápidas?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t3RadioGroupQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton5A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí, mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton5B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Sí, algo" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton5C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton5D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada" />
+            </RadioGroup>
+
+            <!-- Pregunta 6 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. ¿Te sientes cómodo trabajando al aire libre?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t3RadioGroupQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton6A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí, mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton6B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Sí, algo" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton6C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton6D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada" />
+            </RadioGroup>
+
+            <!-- Pregunta 7 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. ¿Te gustaría un trabajo que implique enseñar a otros?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t3RadioGroupQuestion7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton7A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí, mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton7B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Sí, algo" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton7C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton7D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada" />
+            </RadioGroup>
+
+            <!-- Pregunta 8 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8. ¿Te interesa un trabajo en el campo de la salud?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t3RadioGroupQuestion8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton8A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí, mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton8B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Sí, algo" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton8C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton8D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada" />
+            </RadioGroup>
+
+            <!-- Pregunta 9 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. ¿Te gustaría trabajar en tecnología y computadoras?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t3RadioGroupQuestion9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton9A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí, mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton9B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Sí, algo" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton9C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton9D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada" />
+            </RadioGroup>
+
+            <!-- Pregunta 10 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10. ¿Prefieres un trabajo estructurado y predecible?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t3RadioGroupQuestion10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton10A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí, mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton10B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Sí, algo" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton10C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No mucho" />
+
+                <RadioButton
+                    android:id="@+id/t3RadioButton10D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada" />
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/t3BotonEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Enviar" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

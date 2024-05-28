@@ -1,10 +1,416 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Test2Activity">
+    tools:context=".Test1Activity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. ¿Qué tan fácil se te hace aprender nuevos conceptos matemáticos?"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/t2RadioGroupQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton1A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Muy fácil" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton1B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Fácil" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton1C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Difícil" />
+
+                <RadioButton
+                    android:id="@+id/t22RadioButton1D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Muy difícil" />
+            </RadioGroup>
+
+            <!-- Pregunta 2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. ¿Te sientes cómodo resolviendo problemas lógicos?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t2RadioGroupQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton2A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Muy cómodo" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton2B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Cómodo" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton2C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Incómodo" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton2D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Muy incómodo" />
+            </RadioGroup>
+
+            <!-- Pregunta 3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. ¿Cómo describirías tu habilidad para escribir ensayos?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t2RadioGroupQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton3A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Excelente" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton3B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Buena" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton3C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Regular" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton3D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Mala" />
+            </RadioGroup>
+
+            <!-- Pregunta 4 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. ¿Qué tan rápido aprendes nuevas habilidades manuales?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t2RadioGroupQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton4A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Muy rápido" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton4B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Rápido" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton4C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Lento" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton4D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Muy lento" />
+            </RadioGroup>
+
+            <!-- Pregunta 5 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. ¿Eres bueno siguiendo instrucciones detalladas?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t2RadioGroupQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton5A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton5B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) A veces" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton5C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No muy bueno" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton5D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) No" />
+            </RadioGroup>
+
+            <!-- Pregunta 6 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. ¿Qué tan bien te comunicas verbalmente?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t2RadioGroupQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton6A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Excelente" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton6B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Bueno" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton6C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Regular" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton6D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Malo" />
+            </RadioGroup>
+
+            <!-- Pregunta 7 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. ¿Qué tan hábil eres en la resolución de problemas técnicos?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t2RadioGroupQuestion7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton7A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Muy hábil" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton7B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Hábil" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton7C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Poco hábil" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton7D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada hábil" />
+            </RadioGroup>
+
+            <!-- Pregunta 8 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8. ¿Qué tan efectivo eres trabajando bajo presión?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t2RadioGroupQuestion8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton8A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Muy efectivo" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton8B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Efectivo" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton8C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Poco efectivo" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton8D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada efectivo" />
+            </RadioGroup>
+
+            <!-- Pregunta 9 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. ¿Qué tan buena es tu memoria para recordar información factual?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t2RadioGroupQuestion9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton9A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Excelente" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton9B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Buena" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton9C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Regular" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton9D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Mala" />
+            </RadioGroup>
+
+            <!-- Pregunta 10 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10. ¿Qué tan competente eres en la gestión de tu tiempo?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t2RadioGroupQuestion10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton10A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Muy competente" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton10B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Competente" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton10C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Poco competente" />
+
+                <RadioButton
+                    android:id="@+id/t2RadioButton10D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Nada competente" />
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/t2BotonEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Enviar" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

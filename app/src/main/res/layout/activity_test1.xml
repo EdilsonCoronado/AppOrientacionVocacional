@@ -1,10 +1,416 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Test1Activity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Si todos los murciélagos son mamíferos y algunos mamíferos son nocturnos, ¿podemos concluir que algunos murciélagos son nocturnos?"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/t1RadioGroupQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton1A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Sí" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton1B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) No" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton1C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) No se puede concluir" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton1D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Ninguna de las anteriores" />
+            </RadioGroup>
+
+            <!-- Pregunta 2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Completa la serie: 2, 6, 12, 20, __"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t1RadioGroupQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton2A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) 28" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton2B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) 30" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton2C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) 32" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton2D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) 34" />
+            </RadioGroup>
+
+            <!-- Pregunta 3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Encuentra el sinónimo de 'Inaudito':"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t1RadioGroupQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton3A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Normal" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton3B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Insólito" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton3C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Vulgar" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton3D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Ordinario" />
+            </RadioGroup>
+
+            <!-- Pregunta 4 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. ¿Cuál es el opuesto de 'Próspero'?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t1RadioGroupQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton4A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Rápido" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton4B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Desafortunado" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton4C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Rico" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton4D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Difícil" />
+            </RadioGroup>
+
+            <!-- Pregunta 5 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. ¿Cuál de las siguientes es una palabra?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t1RadioGroupQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton5A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Bnaclo" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton5B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Contras" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton5C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Lnasor" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton5D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Allano" />
+            </RadioGroup>
+
+            <!-- Pregunta 6 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. Si Ana es mayor que Beatriz y Beatriz es mayor que Carla, ¿quién es la menor?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t1RadioGroupQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton6A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Ana" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton6B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Beatriz" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton6C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Carla" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton6D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) No se puede determinar" />
+            </RadioGroup>
+
+            <!-- Pregunta 7 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. ¿Cuál número continúa la serie? 3, 9, 27, __"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t1RadioGroupQuestion7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton7A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) 54" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton7B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) 81" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton7C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) 72" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton7D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) 90" />
+            </RadioGroup>
+
+            <!-- Pregunta 8 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8. Encuentra la palabra diferente:"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t1RadioGroupQuestion8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton8A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Manzana" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton8B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Naranja" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton8C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Pera" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton8D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Zanahoria" />
+            </RadioGroup>
+
+            <!-- Pregunta 9 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. ¿Cuál es la fracción que completa la ecuación 1/2 + __ = 3/4?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t1RadioGroupQuestion9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton9A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) 1/4" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton9B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) 2/4" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton9C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) 3/4" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton9D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) 4/4" />
+            </RadioGroup>
+
+            <!-- Pregunta 10 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10. ¿Qué figura no corresponde al grupo?"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/t1RadioGroupQuestion10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton10A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a) Triángulo" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton10B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b) Círculo" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton10C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c) Cuadrado" />
+
+                <RadioButton
+                    android:id="@+id/t1RadioButton10D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d) Línea" />
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/t1BotonEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Enviar" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

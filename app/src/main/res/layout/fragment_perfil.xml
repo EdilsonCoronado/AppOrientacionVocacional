@@ -48,16 +48,88 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!--DNI-->
+        <TextView
+            android:id="@+id/txt_dni"
+            android:text="@string/txt_dni"
+            android:layout_below="@id/txt_email"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_dni"
+            android:text="@string/tv_nombres"
+            android:layout_below="@id/txt_email"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--Telefono-->
+        <TextView
+            android:id="@+id/txt_telefono"
+            android:text="@string/txt_telefono"
+            android:layout_below="@id/txt_dni"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_telefono"
+            android:text="@string/tv_telefono"
+            android:layout_below="@id/txt_dni"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <!--Genero-->
+        <TextView
+            android:id="@+id/txt_genero"
+            android:text="@string/txt_genero"
+            android:layout_below="@id/txt_telefono"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_genero"
+            android:text="@string/tv_genero"
+            android:layout_below="@id/txt_telefono"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--Colegio-->
+        <TextView
+            android:id="@+id/txt_colegio"
+            android:text="@string/txt_colegio"
+            android:layout_below="@id/txt_genero"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_colegio"
+            android:text="@string/tv_colegio"
+            android:layout_below="@id/txt_genero"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_Cerrarsesion"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_email"
+            android:layout_below="@id/tv_colegio"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:text="@string/btn_Cerrarsesion"
             android:textAllCaps="true"
             app:cornerRadius="8dp" />

@@ -10,11 +10,12 @@ import com.example.apporientacinvocacional.databinding.FragmentPerfilBinding
 import com.google.firebase.auth.FirebaseAuth
 import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 import com.example.apporientacinvocacional.OpcionesLoginActivity
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.FirebaseFirestoreException
+import com.google.firebase.firestore.ListenerRegistration
 
 
 class FragmentPerfil : Fragment() {
@@ -22,7 +23,8 @@ class FragmentPerfil : Fragment() {
     private lateinit var binding: FragmentPerfilBinding
     private lateinit var mContext: Context
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var firebaseDatabase: FirebaseDatabase
+    private lateinit var firestore: FirebaseFirestore
+    private var userListener: ListenerRegistration? = null
 
     override fun onAttach(context: Context) {
         mContext = context
@@ -39,7 +41,8 @@ class FragmentPerfil : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         firebaseAuth = FirebaseAuth.getInstance()
-        cargarInfo()
+        firestore = FirebaseFirestore.getInstance()
+        firebaseAuth.currentUser?.email?.let { cargarInfo(it) }
 
         binding.btnCerrarsesion.setOnClickListener {
             firebaseAuth.signOut()
@@ -48,23 +51,40 @@ class FragmentPerfil : Fragment() {
         }
     }
 
-    private fun cargarInfo() {
-        val ref = FirebaseDatabase.getInstance().getReference("Usuarios")
-        ref.child("${firebaseAuth.uid}")
-            .addValueEventListener(object : ValueEventListener{
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    val nombres = "${snapshot.child("nombres").value}"
-                    val email = "${snapshot.child("email").value}"
+    private fun cargarInfo(emailUsuario: String) {
+        firestore.collection("usuario")
+            .whereEqualTo("email", emailUsuario)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                if (!querySnapshot.isEmpty) {
+                    val document = querySnapshot.documents[0]
+                    val nombres = document.getString("nombres")
+                    val apPaterno = document.getString("apPaterno")
+                    val apMaterno = document.getString("apMaterno")
+                    val dni = document.getString("uid")
+                    val genero = document.getString("genero")
+                    val telefono = document.getString("telefono")
+                    val colegio = document.getString("colegio")
 
-                    binding.tvNombres.text = nombres
-                    binding.tvEmail.text = email
+                    binding.tvNombres.text = "$nombres $apPaterno $apMaterno"
+                    binding.tvEmail.text = emailUsuario
+                    binding.tvDni.text = dni
+                    binding.tvTelefono.text = telefono
+                    binding.tvGenero.text = genero
+                    binding.tvColegio.text = colegio
+                } else {
+                    // El documento no existe o no se encontró coincidencia
                 }
-
-                override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
-                }
-            })
+            }
+            .addOnFailureListener { e->
+                //pOR SI HAY ERRORES
+            }
     }
 
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        // Limpiar listener
+        userListener?.remove()
+    }
 }

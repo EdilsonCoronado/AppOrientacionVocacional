@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.apporientacinvocacional.databinding.ActivityRegistroUserBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 import org.intellij.lang.annotations.Pattern
 
 class RegistroUserActivity : AppCompatActivity() {
@@ -20,7 +20,7 @@ class RegistroUserActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistroUserBinding
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var progressDialog: ProgressDialog
-
+    private lateinit var firestore: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,12 +28,13 @@ class RegistroUserActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         firebaseAuth = FirebaseAuth.getInstance()
+        firestore = FirebaseFirestore.getInstance()
 
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Espere por favor")
         progressDialog.setCanceledOnTouchOutside(false)
 
-        val items = arrayOf("Maculino", "Femenino")
+        val items = arrayOf("Masculino", "Femenino")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items)
         binding.etGenero.adapter = adapter
 
@@ -50,17 +51,20 @@ class RegistroUserActivity : AppCompatActivity() {
     private var ap_materno = ""
     private var nombres = ""
     private var telefono = ""
-    private var edad = ""
     private var genero = ""
     private var colegio = ""
+
     private fun validarInfomacion() {
         nombres = binding.etNombres.text.toString().trim()
         email = binding.etEmail .text.toString().trim()
         password = binding.etPassword.text.toString().trim()
         r_password = binding.etRPassword.text.toString().trim()
-
-
         genero = binding.etGenero.selectedItem.toString()
+        dni = binding.etDNI.text.toString().trim()
+        ap_paterno = binding.etApellidoPat.text.toString().trim()
+        ap_materno = binding.etApelidoMat.text.toString().trim()
+        telefono = binding.etTelefono.text.toString().trim()
+        colegio = binding.etColegio.text.toString().trim()
 
         if (nombres.isEmpty()) {
             binding.etNombres.error = "Ingrese nombre"
@@ -85,6 +89,30 @@ class RegistroUserActivity : AppCompatActivity() {
         else if (password != r_password) {
             binding.etRPassword.error = "No coinciden las contraseñas"
             binding.etRPassword.requestFocus()
+        }
+        else if (genero.isEmpty()) {
+            binding.etPassword.error = "Elija su género"
+            binding.etPassword.requestFocus()
+        }
+        else if (dni.isEmpty()) {
+            binding.etPassword.error = "Ingrese DNI"
+            binding.etPassword.requestFocus()
+        }
+        else if (ap_paterno.isEmpty()) {
+            binding.etPassword.error = "Ingrese su apellido"
+            binding.etPassword.requestFocus()
+        }
+        else if (ap_materno.isEmpty()) {
+            binding.etPassword.error = "Ingrese su apellido"
+            binding.etPassword.requestFocus()
+        }
+        else if (telefono.isEmpty()) {
+            binding.etPassword.error = "Ingrese teléfono"
+            binding.etPassword.requestFocus()
+        }
+        else if (colegio.isEmpty()) {
+            binding.etPassword.error = "Ingrese colegio"
+            binding.etPassword.requestFocus()
         }
         else {
             registrarUser()
@@ -112,34 +140,42 @@ class RegistroUserActivity : AppCompatActivity() {
     private fun actualizarInformacion() {
         progressDialog.setMessage("Guardando información")
 
-
-        val uidU = firebaseAuth.uid
         val nombresU = nombres
         val emailU = firebaseAuth.currentUser!!.email
+        val generoU = genero
+        val dniU = dni
+        val apPaternoU = ap_paterno
+        val apMaternoU = ap_materno
+        val telefonoU = telefono
+        val colegioU = colegio
 
-        val datosUsuario = HashMap<String, Any>()
+        val datosUsuario = hashMapOf(
+            "uid" to dniU,
+            "nombres" to nombresU,
+            "email" to emailU,
+            "genero" to generoU,
+            "apPaterno" to apPaternoU,
+            "apMaterno" to apMaternoU,
+            "telefono" to telefonoU,
+            "colegio" to colegioU
+            // Agrega más campos aquí según lo necesites
+        )
 
-        datosUsuario["udi"] = "$uidU"
-        datosUsuario["nombres"] = "$nombresU"
-        datosUsuario["email"] = "$emailU"
-
-        val reference = FirebaseDatabase.getInstance().getReference("Usuarios")
-        reference.child(uidU!!)
-            .setValue(datosUsuario)
+        firestore.collection("usuario")
+            .document(dniU!!)
+            .set(datosUsuario)
             .addOnSuccessListener {
                 progressDialog.dismiss()
-
                 startActivity(Intent(applicationContext, MainActivity::class.java))
                 finishAffinity()
             }
-            .addOnFailureListener {e->
+            .addOnFailureListener { e->
                 progressDialog.dismiss()
                 Toast.makeText(
                     this,
                     "Falló la creación de la cuenta debido a ${e.message}",
                     Toast.LENGTH_SHORT
                 ).show()
-
             }
     }
 }
