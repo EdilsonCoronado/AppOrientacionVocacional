@@ -27,7 +27,7 @@ class OpcionesLoginActivity : AppCompatActivity() {
         }
 
         binding.opcionAdmin.setOnClickListener {
-            startActivity(Intent(applicationContext, LoginUserActivity::class.java))
+            startActivity(Intent(applicationContext, LoginAdminActivity::class.java))
         }
     }
 

@@ -71,6 +71,21 @@
     <string name="etBuscar">Buscar</string>
     <string name="tvFecha">dd/MM/yyyy</string>
 
+    <string name="txt_titulo_test1">Test Psicométrico</string>
+    <string name="txt_titulo_test2">Test de Aptitudes</string>
+    <string name="txt_titulo_test3">Test de Preferencias</string>
+    <string name="txt_titulo_test4">Test de Valores</string>
+    <string name="txt_titulo_test5">Test de Iq General</string>
+    <string name="txt_titulo_test6">Test Psicológico</string>
+    <string name="txt_titulo_feedback">Carreras Recomendadas</string>
+
+    <string name="txt_descripcion_test1">Conoce tus capacidades psíquicas</string>
+    <string name="txt_descripcion_test2">Evalúa tus habilidades de razonamiento lógico y verbal</string>
+    <string name="txt_descripcion_test3">Combine varios factores para recomendar carreras</string>
+    <string name="txt_descripcion_test4">Identifica tus valores fundamentales</string>
+    <string name="txt_descripcion_test5">Determina tu inteligencia general</string>
+    <string name="txt_descripcion_test6">Comprende los rasgos de tu personalidad</string>
+
     <string name="BtnCerrarVisualizador">Cerrar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
