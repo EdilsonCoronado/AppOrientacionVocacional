@@ -95,6 +95,21 @@
     <string name="txt_descripcion_test6">Comprende los rasgos de tu personalidad</string>
 
     <string name="BtnCerrarVisualizador">Cerrar</string>
+
+    <string name="txt_titulo_add_student">Añadir notas de estudiante</string>
+    <string name="select_student">Seleccionar alumno:</string>
+    <string name="add_grades">Introduzca las notas del alumno:</string>
+    <string name="course_1">Matemáticas</string>
+    <string name="course_2">Comunicación</string>
+    <string name="course_3">Ciencias naturales</string>
+    <string name="course_4">Historia</string>
+    <string name="course_5">Participación Cívica</string>
+    <string name="course_6">Educación Física</string>
+    <string name="course_7">Arte</string>
+    <string name="course_8">Inglés</string>
+    <string name="course_9">Religión</string>
+    <string name="course_10">Educación para el Trabajo</string>
+    <string name="btn_save_grades">Guardar Notas</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

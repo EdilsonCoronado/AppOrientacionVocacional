@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,4 +8,128 @@
     android:layout_height="match_parent"
     tools:context=".AgregarAlumnoActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_titulo_add_student"
+        android:text="@string/txt_titulo_add_student"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/txt_spinner_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_student"
+        android:layout_below="@id/txt_titulo_add_student"/>
+    <!-- Spinner para seleccionar el alumno -->
+    <Spinner
+        android:id="@+id/spinnerAlumnos"
+        android:layout_below="@id/txt_spinner_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:spinnerMode="dropdown"
+        android:prompt="@string/select_student" />
+
+    <TextView
+        android:id="@+id/txt_grades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_grades"
+        android:layout_below="@id/spinnerAlumnos"/>
+
+    <!-- Campos de texto para introducir las notas de los cursos -->
+    <EditText
+        android:id="@+id/editTextNotaCurso1"
+        android:layout_below="@id/txt_grades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/course_1"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextNotaCurso2"
+        android:layout_below="@+id/editTextNotaCurso1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/course_2"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextNotaCurso3"
+        android:layout_below="@+id/editTextNotaCurso2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/course_3"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextNotaCurso4"
+        android:layout_below="@+id/editTextNotaCurso3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/course_4"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextNotaCurso5"
+        android:layout_below="@+id/editTextNotaCurso4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/course_5"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextNotaCurso6"
+        android:layout_below="@+id/editTextNotaCurso5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/course_6"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextNotaCurso7"
+        android:layout_below="@+id/editTextNotaCurso6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/course_7"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextNotaCurso8"
+        android:layout_below="@+id/editTextNotaCurso7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/course_8"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextNotaCurso9"
+        android:layout_below="@+id/editTextNotaCurso8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/course_9"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextNotaCurso10"
+        android:layout_below="@+id/editTextNotaCurso9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/course_10"
+        android:inputType="numberDecimal" />
+
+    <!-- Botón para guardar las notas -->
+    <Button
+        android:id="@+id/buttonGuardarNotas"
+        android:layout_below="@+id/editTextNotaCurso10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_save_grades" />
+</RelativeLayout>
