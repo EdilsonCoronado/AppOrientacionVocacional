@@ -3,6 +3,7 @@
     <string name="item_perfil">Perfil</string>
     <string name="item_tests">Tests</string>
     <string name="item_feedback">Feedback</string>
+    <string name="item_add">Añadir</string>
 
     <string name="tv_Titulo">Título</string>
 
@@ -15,7 +16,6 @@
     <string name="btn_Ingresar">Ingresar</string>
     <string name="txt_no_tienes_cuenta">¿No tienes una cuenta?</string>
     <string name="tv_registrarme">Registrarme</string>
-    <string name="tv_recuperar_cuenta">¿Olvidé la contraseña? <b> Recuperar</b></string>
 
     <string name="txt_registro">Registro</string>
     <string name="et_R_Password">Repita la contraseña</string>
@@ -60,6 +60,10 @@
     <string name="et_pass_nueva">Contraseña nueva</string>
     <string name="et_r_pass_nueva">Repita contraseña nueva</string>
     <string name="btn_CambiarPassword">Cambiar</string>
+
+
+    <string name="et_Alumno">nombre del alumno</string>
+
 
     <string name="item_uid">uid del usuario</string>
     <string name="item_nombre">nombre del usuario</string>

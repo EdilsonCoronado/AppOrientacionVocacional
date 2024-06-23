@@ -1,31 +1,27 @@
 package com.example.apporientacinvocacional.Fragmentos
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.apporientacinvocacional.R
-import com.example.apporientacinvocacional.databinding.FragmentPerfilBinding
-import com.google.firebase.auth.FirebaseAuth
-import android.content.Context
-import android.content.Intent
-import android.widget.Toast
-import com.example.apporientacinvocacional.MainAdminActivity
 import com.example.apporientacinvocacional.OpcionesLoginActivity
+import com.example.apporientacinvocacional.R
+import com.example.apporientacinvocacional.databinding.FragmentPerfilAdminBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.DocumentSnapshot
-import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.ListenerRegistration
 
 
-class FragmentPerfil : Fragment() {
+class FragmentPerfilAdmin : Fragment() {
 
-    private lateinit var binding: FragmentPerfilBinding
+    private lateinit var binding: FragmentPerfilAdminBinding
     private lateinit var mContext: Context
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
-    private var userListener: ListenerRegistration? = null
+    private var adminListener: ListenerRegistration? = null
 
     override fun onAttach(context: Context) {
         mContext = context
@@ -33,8 +29,7 @@ class FragmentPerfil : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        binding = FragmentPerfilBinding.inflate(layoutInflater, container, false)
+        binding = FragmentPerfilAdminBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
@@ -53,7 +48,7 @@ class FragmentPerfil : Fragment() {
     }
 
     private fun cargarInfo(emailUsuario: String) {
-        firestore.collection("usuario")
+        firestore.collection("admin")
             .whereEqualTo("email", emailUsuario)
             .get()
             .addOnSuccessListener { querySnapshot ->
@@ -63,17 +58,12 @@ class FragmentPerfil : Fragment() {
                     val apPaterno = document.getString("apPaterno")
                     val apMaterno = document.getString("apMaterno")
                     val dni = document.getString("uid")
-                    val genero = document.getString("genero")
                     val telefono = document.getString("telefono")
-                    val colegio = document.getString("colegio")
 
                     binding.tvNombres.text = "$nombres $apPaterno $apMaterno"
                     binding.tvEmail.text = emailUsuario
                     binding.tvDni.text = dni
                     binding.tvTelefono.text = telefono
-                    binding.tvGenero.text = genero
-                    binding.tvColegio.text = colegio
-
                 } else {
                     // El documento no existe o no se encontró coincidencia
                 }
@@ -83,10 +73,10 @@ class FragmentPerfil : Fragment() {
             }
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         // Limpiar listener
-        userListener?.remove()
+        adminListener?.remove()
     }
+
 }

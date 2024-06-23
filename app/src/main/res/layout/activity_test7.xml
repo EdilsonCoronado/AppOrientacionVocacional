@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Test7Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Elige a un alumno:"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/et_Genero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/et_Alumno"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <EditText
+                android:id="@+id/etCurso1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Matemática"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/etCurso2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Comunicación"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/etCurso3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ciencia y Tecnología"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/etCurso4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ciencias Sociales"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/etCurso5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Desarrollo Personal, Cuidadana y Cívica"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/etCurso6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Educación Física"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/etCurso7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Arte y Cultura"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/etCurso8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Inglés"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/etCurso9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Religión"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/etCurso10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Educación para el Trabajo"
+                android:inputType="numberDecimal"/>
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

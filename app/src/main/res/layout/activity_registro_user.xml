@@ -155,9 +155,14 @@
 
 
             <!--Género-->
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Elige un género" />
                 <Spinner
                     android:id="@+id/et_Genero"
                     android:layout_width="match_parent"

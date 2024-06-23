@@ -16,6 +16,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".AgregarAlumnoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Test7Activity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".Test6Activity"
             android:exported="false" />
         <activity
